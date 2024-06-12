@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PruralizadorApplication {
+public class PluralizadorApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PruralizadorApplication.class, args);
+		SpringApplication.run(PluralizadorApplication.class, args);
 	}
 
 }
