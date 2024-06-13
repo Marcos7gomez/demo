@@ -17,9 +17,9 @@ public class PluralizadorController {
 
     private ResultadoPlural pluralizador(String[] palabras){
         List<String> palabrasPluralizadas = new ArrayList<>();
-        int [] cantidadesPorRegla = new int[4]; // Contadores para cada regla
+        int[] cantidadesPorRegla = new int[4]; // Contadores para cada regla
 
-        for (String palabra : palabras){
+        for (String palabra : palabras) {
             String plural = hacerPlural(palabra, cantidadesPorRegla);
             palabrasPluralizadas.add(plural);
         }
@@ -27,13 +27,13 @@ public class PluralizadorController {
     }
 
     private String hacerPlural(String palabra, int[] cantidadesPorRegla){
-        if(palabra == null || palabra.isEmpty()){
+        if (palabra == null || palabra.isEmpty()) {
             return palabra;
         }
         // Convertir la palabra a minúsculas
         palabra = palabra.toLowerCase();
 
-        char ultimaLetra = palabra.charAt(palabra.length()-1);
+        char ultimaLetra = palabra.charAt(palabra.length() - 1);
 
         // Regla 1: Si el sustantivo termina en vocal se agrega "s"
         if (ultimaLetra == 'a' || ultimaLetra == 'e' || ultimaLetra == 'i' || ultimaLetra == 'o' || ultimaLetra == 'u'){
